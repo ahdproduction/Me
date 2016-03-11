@@ -11,7 +11,7 @@ namespace Me
 		public LoginPage ()
 		{
 			InitializeComponent ();
-			//NavigationPage.SetHasNavigationBar (this, false);
+			NavigationPage.SetHasNavigationBar (this, false);
 		}
 
 		protected override void OnBindingContextChanged ()

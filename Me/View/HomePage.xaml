@@ -2,79 +2,62 @@
 <ContentPage
 	xmlns="http://xamarin.com/schemas/2014/forms"
 	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-	x:Class="Me.HomePage"
-	BackgroundColor="{DynamicResource BlueDark}">
+	x:Class="Me.HomePage">
 	<ContentPage.Content>
 		<ScrollView>
-			<!-- MAIN CONTAINER -->
-			<Grid
-				ColumnSpacing="0"
-				RowSpacing="0"
-				HorizontalOptions="Fill"
-				VerticalOptions="FillAndExpand">
-				<Grid.RowDefinitions>
-					<RowDefinition
-						Height="100" />
-					<RowDefinition
-						Height="*" />
-					<RowDefinition
-						Height="*" />
-				</Grid.RowDefinitions>
-				<!-- LOGO -->
+			<StackLayout
+				Padding="10">
 				<StackLayout
-					Grid.Row="0"
-					VerticalOptions="Center">
-					<Image
-						Source="icon.png"/>
+					Padding="0"
+					Orientation="Horizontal"
+					HorizontalOptions="FillAndExpand"
+					VerticalOptions="Start">
+					<Button
+						Style="{DynamicResource ButtonStyleBleuDark}"
+						Text="DRUMZ"
+						TextColor="{DynamicResource BlueLight}"
+						HorizontalOptions="FillAndExpand"
+						VerticalOptions="FillAndExpand" />
+					<Button
+						Style="{DynamicResource ButtonStyleBleuDark}"
+						Text="SAMPLE"
+						TextColor="{DynamicResource BlueLight}"
+						HorizontalOptions="FillAndExpand"
+						VerticalOptions="FillAndExpand" />
+					<Button
+						Style="{DynamicResource ButtonStyleBleuDark}"
+						Text="LOOP"
+						TextColor="{DynamicResource BlueLight}"
+						HorizontalOptions="FillAndExpand"
+						VerticalOptions="FillAndExpand" />
 				</StackLayout>
-				<!---FIELDS CONTAINER-->
-				<Grid
-					Padding="40, 0"
-					ColumnSpacing="0"
-					RowSpacing="0"
-					VerticalOptions="CenterAndExpand"
-					Grid.Row="1">
-					<StackLayout
-						Grid.Row="0"
-						VerticalOptions="StartAndExpand">
-						<!---EMAIL FIELD-->
-						<Entry
-							Placeholder="E-mail"
-							Text="{Binding Email}"
-							Style="{DynamicResource LoginEntryStyle}" />
-						<Label
-							HorizontalOptions="Start"
-							Text=" Please enter a valid e-mail "
-							IsVisible="false"
-							Style="{DynamicResource ValidationEntryErrorStyle}" />
-					</StackLayout>
-					<!---PASSWORD FIELD-->
-					<Entry
-						Grid.Row="2"
-						Placeholder="Password"
-						Text="{Binding Password}"
-						IsPassword="true"
-						Style="{DynamicResource LoginEntryStyle}"
-						VerticalOptions="StartAndExpand" />
-				</Grid>
-				<!-- FOOTER -->
 				<StackLayout
-					HorizontalOptions="Fill"
-					VerticalOptions="EndAndExpand"
-					Padding="20"
-					Grid.Row="2">
+					Padding="0"
+
+					HorizontalOptions="FillAndExpand"
+					VerticalOptions="EndAndExpand">
 					<Button
 						Style="{DynamicResource ButtonStyleBlueLight}"
-						VerticalOptions="End"
-						Text="Login"
-						Command="{Binding LoginCommand}" />
+						Text="TRANSLATE"
+						HorizontalOptions="FillAndExpand"
+						VerticalOptions="FillAndExpand" />
 					<Button
-						Style="{DynamicResource ButtonStyleTransparent}"
-						VerticalOptions="End"
-						Text="Sign up"
-						Command="{Binding NavigateCommand}" />
+						Style="{DynamicResource ButtonStyleBlueLight}"
+						Text="SCAN"
+						HorizontalOptions="FillAndExpand"
+						VerticalOptions="FillAndExpand" />
+					<Button
+						Style="{DynamicResource ButtonStyleBlueLight}"
+						Text="GPS"
+						HorizontalOptions="FillAndExpand"
+						VerticalOptions="FillAndExpand" />
+					<Button
+						Style="{DynamicResource ButtonStyleBlueLight}"
+						Text="DATABASE"
+						HorizontalOptions="FillAndExpand"
+						VerticalOptions="FillAndExpand" />
 				</StackLayout>
-			</Grid>
+			</StackLayout>
 		</ScrollView>
 	</ContentPage.Content>
 </ContentPage>
