@@ -10,13 +10,14 @@ namespace Me
 		static Main ()
 		{
 			ViewFactory.Register<HomePage, HomeViewModel> ();
+			ViewFactory.Register<LoginPage, LoginViewModel> ();
 		}
 
 		public Main ()
 		{
 			InitializeComponent ();
 
-			MainPage = new NavigationPage (ViewFactory.Create<HomeViewModel> () as Page) {
+			MainPage = new NavigationPage (ViewFactory.Create<LoginViewModel> () as Page) {
 				Title = "HOME"
 			};
 		}

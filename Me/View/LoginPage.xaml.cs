@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Me
 {
-	public partial class HomePage : ContentPage
+	public partial class LoginPage : ContentPage
 	{
-		public HomePage ()
+		public LoginPage ()
 		{
 			InitializeComponent ();
 			NavigationPage.SetHasNavigationBar (this, false);
@@ -16,7 +16,7 @@ namespace Me
 
 		protected override void OnBindingContextChanged ()
 		{
-			var viewModel = BindingContext as HomeViewModel;
+			var viewModel = BindingContext as LoginViewModel;
 			if (viewModel == null)
 				return;
 			viewModel.NavigateToViewModelDelegate = NavigateToViewModel;
