@@ -23,18 +23,21 @@
 
 			<!--BUTTON-->
 			<Style x:Key="ButtonStyleTransparent" TargetType="Button">
+				<Setter Property="TextColor"		Value="Black" />
 				<Setter	Property="FontSize"			Value="{StaticResource BaseFontSize}" />
 				<Setter	Property="BorderRadius"		Value="{StaticResource BaseButtonBorderRadius}" />
 				<Setter Property="BackgroundColor" 	Value="Transparent"/>
 			</Style>
 
 			<Style x:Key="ButtonStyleGray" TargetType="Button">
+				<Setter Property="TextColor"		Value="Black" />
 				<Setter	Property="FontSize"			Value="{StaticResource BaseFontSize}" />
 				<Setter	Property="BorderRadius"		Value="{StaticResource BaseButtonBorderRadius}" />
 				<Setter Property="BackgroundColor" 	Value="{StaticResource GrayDark}"/>
 			</Style>
 
 			<Style x:Key="ButtonStyleBleuDark" TargetType="Button">
+				<Setter Property="TextColor" 		Value="White" />
 				<Setter	Property="FontSize"			Value="{StaticResource BaseFontSize}" />
 				<Setter	Property="BorderRadius"		Value="0" />
 				<Setter Property="BackgroundColor" 	Value="{StaticResource BlueDark}"/>
@@ -42,6 +45,7 @@
 			</Style>
 
 			<Style x:Key="ButtonStyleBlueLight" TargetType="Button">
+				<Setter Property="TextColor" 		Value="White" />
 				<Setter	Property="FontSize"			Value="{StaticResource BaseFontSize}" />
 				<Setter	Property="BorderRadius"		Value="0" />
 				<Setter Property="BackgroundColor" 	Value="{StaticResource BlueLight}"/>
@@ -49,7 +53,7 @@
 			</Style>
 
 			<Style x:Key="ButtonStyleBlack" TargetType="Button">
-				<Setter Property="TextColor"		Value="Black" />
+				<Setter Property="TextColor" 		Value="White" />
 				<Setter	Property="FontSize"			Value="{StaticResource BaseFontSize}" />
 				<Setter	Property="BorderRadius"		Value="0" />
 				<Setter Property="BackgroundColor" 	Value="{StaticResource PinkLight}"/>
