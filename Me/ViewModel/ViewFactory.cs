@@ -10,7 +10,7 @@ using System;
 using System.Collections.Generic;
 using Xamarin.Forms;
 
-namespace Scanne
+namespace Me
 {
 	public static class ViewFactory
 	{

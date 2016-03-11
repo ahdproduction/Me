@@ -9,12 +9,16 @@ namespace Me
 	{
 		static Main ()
 		{
-			
+			ViewFactory.Register<HomePage, HomeViewModel> ();
 		}
 
 		public Main ()
 		{
 			InitializeComponent ();
+
+			MainPage = new NavigationPage (ViewFactory.Create<HomeViewModel> () as Page) {
+				Title = "HOME"
+			};
 		}
 	}
 }

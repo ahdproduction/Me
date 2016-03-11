@@ -14,7 +14,7 @@ using System;
 using System.Threading.Tasks;
 using System.Reflection;
 
-namespace Scanne
+namespace Me
 {
 	public abstract class ViewModel : INotifyPropertyChanged
 	{

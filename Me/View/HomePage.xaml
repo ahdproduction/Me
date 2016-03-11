@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+	xmlns="http://xamarin.com/schemas/2014/forms"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	x:Class="Me.HomePage" BackgroundColor="{DynamicResource BlueDark}">
+	<ContentPage.Content>
+
+	<ScrollView>
+		<!-- MAIN CONTAINER -->
+		<Grid
+			ColumnSpacing="0" 
+			RowSpacing="0" 
+			HorizontalOptions="Fill"
+			VerticalOptions="FillAndExpand" >
+
+			<Grid.RowDefinitions>
+				<RowDefinition Height="100" />
+				<RowDefinition Height="*" />
+				<RowDefinition Height="*" />
+			</Grid.RowDefinitions>
+
+			<!-- LOGO -->
+<!--			<commonViews:BrandBlock 
+				Grid.Row="0"
+				VerticalOptions="Center"
+			/>-->
+
+			<!---FIELDS CONTAINER-->
+			<Grid 
+				Padding="40, 0"
+				ColumnSpacing="0" 
+				RowSpacing="0" 
+				VerticalOptions="CenterAndExpand"
+				Grid.Row="1">
+
+				<StackLayout
+					Grid.Row="0"
+					VerticalOptions="StartAndExpand" >
+					<!---EMAIL FIELD--> 
+					<Entry
+						Placeholder="E-mail"
+						Text= "{Binding Email}"
+						Style="{DynamicResource LoginEntryStyle}" />
+
+					<Label
+						HorizontalOptions="Start"
+						Text=" Please enter a valid e-mail " IsVisible="false"
+						Style="{DynamicResource ValidationEntryErrorStyle}"
+						/>
+
+				</StackLayout>
+
+				<!---PASSWORD FIELD-->
+				<Entry 
+					Grid.Row="2"
+					Placeholder="Password"
+					Text= "{Binding Password}"
+					IsPassword="true"
+					Style="{DynamicResource LoginEntryStyle}" 
+					VerticalOptions="StartAndExpand" />
+
+			</Grid>
+
+				
+			<!-- FOOTER -->
+			<StackLayout 
+				HorizontalOptions="Fill"
+				VerticalOptions="EndAndExpand" 
+				Padding="20"
+				Grid.Row="2" >
+
+				<Button
+					Style="{DynamicResource ButtonStyleBlueLight}"
+					VerticalOptions="End"
+					Text="Login"
+					Command="{Binding LoginCommand}" />
+				<Button
+					Style="{DynamicResource ButtonStyleTransparent}"
+					VerticalOptions="End"
+					Text="Sign up"
+					Command="{Binding NavigateCommand}"	/>
+			</StackLayout>
+
+		</Grid>
+	</ScrollView>
+
+
+	</ContentPage.Content>
+</ContentPage>

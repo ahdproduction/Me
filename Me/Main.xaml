@@ -15,32 +15,55 @@
 			<Color x:Key="BlueLight">#acc7e9</Color>
 			<Color x:Key="BlueDark">#265987</Color>
 
+
 			<x:Double x:Key="BaseFontSize">16</x:Double>
 			<x:Double x:Key="BaseButtonHeight">44</x:Double>
 			<x:Double x:Key="BaseButtonWidth">15</x:Double>
 			<x:Double x:Key="BaseButtonBorderRadius">2</x:Double>
 
 			<!--BUTTON-->
-			<Style x:Key="ButtonPadStyle" TargetType="Button">
+			<Style x:Key="ButtonStyleTransparent" TargetType="Button">
+				<Setter	Property="FontSize"			Value="{StaticResource BaseFontSize}" />
+				<Setter	Property="BorderRadius"		Value="{StaticResource BaseButtonBorderRadius}" />
+				<Setter Property="BackgroundColor" 	Value="Transparent"/>
+			</Style>
+
+			<Style x:Key="ButtonStyleGray" TargetType="Button">
 				<Setter	Property="FontSize"			Value="{StaticResource BaseFontSize}" />
 				<Setter	Property="BorderRadius"		Value="{StaticResource BaseButtonBorderRadius}" />
 				<Setter Property="BackgroundColor" 	Value="{StaticResource GrayDark}"/>
 			</Style>
 
-			<Style x:Key="ButtonSectionStyle" TargetType="Button">
+			<Style x:Key="ButtonStyleBleuDark" TargetType="Button">
 				<Setter	Property="FontSize"			Value="{StaticResource BaseFontSize}" />
 				<Setter	Property="BorderRadius"		Value="0" />
 				<Setter Property="BackgroundColor" 	Value="{StaticResource BlueDark}"/>
 				<Setter	Property="HeightRequest"	Value="{StaticResource BaseButtonHeight}" />
 			</Style>
 
-			<Style x:Key="ButtonPlayStyle" TargetType="Button">
+			<Style x:Key="ButtonStyleBlueLight" TargetType="Button">
+				<Setter	Property="FontSize"			Value="{StaticResource BaseFontSize}" />
+				<Setter	Property="BorderRadius"		Value="0" />
+				<Setter Property="BackgroundColor" 	Value="{StaticResource BlueLight}"/>
+				<Setter	Property="HeightRequest"	Value="{StaticResource BaseButtonHeight}" />
+			</Style>
+
+			<Style x:Key="ButtonStyleBlack" TargetType="Button">
 				<Setter Property="TextColor"		Value="Black" />
 				<Setter	Property="FontSize"			Value="{StaticResource BaseFontSize}" />
 				<Setter	Property="BorderRadius"		Value="0" />
 				<Setter Property="BackgroundColor" 	Value="{StaticResource PinkLight}"/>
 				<Setter	Property="HeightRequest"	Value="{StaticResource BaseButtonHeight}" />
 			</Style>
+
+			<!--ENTRY-->
+			<Style x:Key="LoginEntryStyle" TargetType="Entry">
+				<Setter Property="TextColor" Value="White" />
+				<Setter Property="BackgroundColor" Value="Transparent"/>
+			</Style>
+
+
+
 
 		</ResourceDictionary>
 	</Application.Resources>
