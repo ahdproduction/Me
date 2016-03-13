@@ -16,23 +16,17 @@ namespace Me
 
 		protected override void OnBindingContextChanged ()
 		{
-			var viewModel = BindingContext as HomeViewModel;
-			if (viewModel == null)
+			base.OnBindingContextChanged ();
+			var viewModel = BindingContext as ViewModel;
+			if (viewModel == null) 
 				return;
 			viewModel.NavigateToViewModelDelegate = NavigateToViewModel;
-			viewModel.NavigateBackDelegate = NavigateBack;
 		}
 
 		async Task<bool> NavigateToViewModel (Type tViewModel, Func<object> viewModelFactory)
 		{
 			await Navigation.PushAsync ((Page)ViewFactory.Create (tViewModel, () => (ViewModel)viewModelFactory ()));
 			//Navigation.RemovePage (this);
-			return true;
-		}
-
-		public async Task<bool> NavigateBack ()
-		{
-			await Navigation.PopAsync ();			
 			return true;
 		}
 	}

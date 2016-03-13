@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Windows.Input;
+using Xamarin.Forms;
 
 namespace Me
 {
@@ -7,6 +9,16 @@ namespace Me
 		public HomeViewModel ()
 		{
 		}
+
+		public ICommand NavigateToTranslateCommand {
+			get {
+				return new Command (async() => {
+					await NavigateToViewModel<TranslateViewModel> ();
+
+				});
+			}
+		}
+
 	}
 }
 

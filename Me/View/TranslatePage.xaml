@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+	xmlns="http://xamarin.com/schemas/2014/forms"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	x:Class="Me.TranslatePage"
+	Title="Translate"
+	BackgroundColor="Red">
+	<ContentPage.Content>
+		<ScrollView>
+			<StackLayout>
+				<Entry
+					Text="{Binding ContentText}"
+					Style="{DynamicResource LoginEntryStyle}"
+					Placeholder="text original" />
+				<Entry
+					Text="{Binding ContentTranslate}"
+					Style="{DynamicResource LoginEntryStyle}"
+					Placeholder="text traduit" />
+				<Entry
+					Text="{Binding Language}"
+					Style="{DynamicResource LoginEntryStyle}"
+					Placeholder="text traduit" />
+<!--				<Button
+					Style="{DynamicResource ButtonStyleTransparent}"
+					Text="translate"
+					Command="{Binding Translate}" />-->
+				<Picker	x:Name="Mypicker">
+					<Picker.Items>
+					</Picker.Items>
+				</Picker>
+			</StackLayout>
+		</ScrollView>
+	</ContentPage.Content>
+</ContentPage>

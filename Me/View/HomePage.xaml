@@ -40,7 +40,8 @@
 						Style="{DynamicResource ButtonStyleBlueLight}"
 						Text="TRANSLATE"
 						HorizontalOptions="FillAndExpand"
-						VerticalOptions="FillAndExpand" />
+						VerticalOptions="FillAndExpand"
+						Command="{ Binding NavigateToTranslateCommand }"/>
 					<Button
 						Style="{DynamicResource ButtonStyleBlueLight}"
 						Text="SCAN"

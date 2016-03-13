@@ -13,11 +13,11 @@ namespace Me
 		{
 		}
 
-		public async Task<string> TranslateAsync (string ContentText)
+		public async Task<string> TranslateAsync (string ContentText, string Language)
 		{
 			string ContentTranslate;
 
-			string uri = "https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=fr&dt=t&q=" + ContentText;
+			string uri = "https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=" + Language + "&dt=t&q=" + ContentText;
 			//string uri2 = "https://www.googleapis.com/language/translate/v2?q=bateau&target=en&format=text&fields=translations";
 
 			var client = new HttpClient ();

@@ -11,6 +11,7 @@ namespace Me
 		{
 			ViewFactory.Register<HomePage, HomeViewModel> ();
 			ViewFactory.Register<LoginPage, LoginViewModel> ();
+			ViewFactory.Register<TranslatePage, TranslateViewModel> ();
 		}
 
 		public Main ()
