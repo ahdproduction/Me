@@ -2,7 +2,8 @@
 <ContentPage
 	xmlns="http://xamarin.com/schemas/2014/forms"
 	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-	x:Class="Me.HomePage">
+	x:Class="Me.HomePage"
+	BackgroundColor="White">
 	<ContentPage.Content>
 		<ScrollView>
 			<StackLayout
@@ -14,19 +15,19 @@
 					VerticalOptions="Start">
 					<Button
 						Style="{DynamicResource ButtonStyleBleuDark}"
-						Text="DRUMZ"
+						Text="ONE"
 						TextColor="{DynamicResource BlueLight}"
 						HorizontalOptions="FillAndExpand"
 						VerticalOptions="FillAndExpand" />
 					<Button
 						Style="{DynamicResource ButtonStyleBleuDark}"
-						Text="SAMPLE"
+						Text="TWO"
 						TextColor="{DynamicResource BlueLight}"
 						HorizontalOptions="FillAndExpand"
 						VerticalOptions="FillAndExpand" />
 					<Button
 						Style="{DynamicResource ButtonStyleBleuDark}"
-						Text="LOOP"
+						Text="THREE"
 						TextColor="{DynamicResource BlueLight}"
 						HorizontalOptions="FillAndExpand"
 						VerticalOptions="FillAndExpand" />

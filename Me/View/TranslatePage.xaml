@@ -1,33 +1,44 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage
-	xmlns="http://xamarin.com/schemas/2014/forms"
-	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-	x:Class="Me.TranslatePage"
-	Title="Translate"
-	BackgroundColor="Red">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Me.TranslatePage" Title="Translate" BackgroundColor="White">
 	<ContentPage.Content>
 		<ScrollView>
-			<StackLayout>
-				<Entry
-					Text="{Binding ContentText}"
-					Style="{DynamicResource LoginEntryStyle}"
-					Placeholder="text original" />
-				<Entry
-					Text="{Binding ContentTranslate}"
-					Style="{DynamicResource LoginEntryStyle}"
-					Placeholder="text traduit" />
-				<Entry
-					Text="{Binding Language}"
-					Style="{DynamicResource LoginEntryStyle}"
-					Placeholder="text traduit" />
-<!--				<Button
-					Style="{DynamicResource ButtonStyleTransparent}"
-					Text="translate"
-					Command="{Binding Translate}" />-->
-				<Picker	x:Name="Mypicker">
-					<Picker.Items>
-					</Picker.Items>
-				</Picker>
+			<StackLayout Padding="10">
+
+			<StackLayout Padding="10">
+				<Label Text="Select language" 
+						TextColor="Gray" IsVisible="false"/>
+				<Picker x:Name="Mypicker1" SelectedIndex="{Binding selectedIndex2}" IsVisible="false"/>
+			</StackLayout>
+
+
+			<StackLayout Padding="10">
+				<Label Text="Write the text to be translated"
+						TextColor="Gray" />
+				<Editor Text="{Binding ContentText}"
+						BackgroundColor="#E1ECFF"
+						HeightRequest="100" />
+			</StackLayout>
+
+			<StackLayout Padding="10">
+				<Label Text="Select language" 
+						TextColor="Gray" />
+				<Picker x:Name="Mypicker" SelectedIndex="{Binding SelectedIndex1}"/>
+			</StackLayout>
+
+			<StackLayout Padding="10">
+				<Label Text="Your text translated" 
+						TextColor="Gray" />
+				<Editor Text="{Binding ContentTranslate}"
+						BackgroundColor="#E1ECFF"
+						HeightRequest="100" />
+			</StackLayout>
+
+			<StackLayout Padding="10">
+				<Button Style="{DynamicResource ButtonStyleBleuDark}"
+						Text="TRANSLATE"
+						Command="{Binding Translate}" />
+			</StackLayout>
+
 			</StackLayout>
 		</ScrollView>
 	</ContentPage.Content>
